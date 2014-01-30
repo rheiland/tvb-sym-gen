@@ -3,62 +3,74 @@ class Node(object):
         self.deps = deps
         self.meta = meta
 
-class Idx(Node):
-    pass
+class Shaped(object):
+    """
+    If vectorization handled explicitly, useful to track shapes & types along
+    dataflow. This forces us to handle broadcasting, reductions, etc. correctly.
+    If none is given, we can assume scalar? Idx and Assign would be informed.
+
+    """
+
+    def __init__(self, *deps, **meta):
+        for k, v in (('shape', ()), ('dtype', 'f32')):
+            meta[k] = meta.get(k, v)
+        super(Shape, self).__init__(*deps, **meta)
+
+class Idx(Node, Shaped):
+    def __init__(self, *deps, **meta):
+        meta['dtype'] = meta.get('dtype', 'i32')
+        super(Idx, self).__init__(*deps, **meta)
 
 class Indexable(object):
     def __getitem__(self, key):
         return Idx(self, key)
 
-class Expr(Node):
+class Expr(Node, Shaped):
     arith = lambda op: lambda s, o: Expr(s, o, op=op)
     for op in 'mul add div sub'.split(' '):
         locals()['__%s__' % op] = arith(op)
 
-class Assign(Node):
+class Assign(Node, Shaped):
+    "Depend on an assignment, not symbol, for the assigned value"
     pass
 
-class Sym(Expr):
+class Sym(Expr, Shaped):
     pass
 
-class Const(Node):
+class Const(Node, Shaped):
     pass
 
-class Par(Node):
+class Par(Node, Shaped):
     pass
 
-class Sum(Node):
+# Coupling (summation is a reduction)
+class Reduce(Node):
     pass
 
-class DenseSum(Node):
+class DenseReduce(Node):
     pass
 
-class SparseSum(Node):
+class SparseReduce(Node):
     pass
 
-class Randn(Node):
+# Noise : Randn + Expr
+class Randn(Node, Shaped):
     pass
 
-"""
-n, m = Dim(name="n"), Dim(name="m")
-x = Sym(name='x', shape=(n, ))
-dt = Const(value=0.1)
-i = Sym(name='i')
-x_i = x[i]
-set_x = Assign(x_i, x_i + dt*(-x_i))
+# Monitors
+class Buffer(Node, Shaped):
+    pass
 
-But normally we'd indicate dependence of symbol on expression, not assignment
-on expression. How ot resolve? Indicate that a symbol binds to value. For the
-purposes of the loop body, we can assume single assignent, so
+class Filter(Node, Shaped):
+    pass
 
->>> dx = Sym(-x, name='dx', shape=(n, ))
->>> x = 
+class SpatialFilter(Filter):
+    pass
 
-Nope, we need to rep the Assign explicitly, and ref it. The dependence of the
-sequence needs to be part of the graph.
+class TemporalFilter(Filter):
+    pass
 
-If vectorization handled explicitly, useful to track shapes & types along
-dataflow. This forces us to handle broadcasting, reductions, etc. correctly.
-If none is given, we can assume scalar? Idx and Assign would be informed.
+# Stimulus is broadcasting temporal & spatial vector : expr + idx
+class Stimulus(Node):
+    pass
 
-"""
