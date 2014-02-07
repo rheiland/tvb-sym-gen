@@ -3,7 +3,7 @@
 symgen
 ======
 
-Symgen API documentation, in order of workflow:
+Symgen API documentation, in order of conceptual workflow:
 
 .. automodule:: symgen.vb
     :members:
