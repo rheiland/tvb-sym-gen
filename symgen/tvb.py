@@ -59,6 +59,7 @@ class Stimulus(Node):
 
     # broadcasts temporal & spatial vector : expr + idx
 
+
 class Simulator(TVBNode):
     """
     An IR node representing a TVB Simulator instance.
