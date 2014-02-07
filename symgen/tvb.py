@@ -6,49 +6,45 @@ Trivial transformations from TVB's simulator class to IR nodes
 
 """
 
-from tvb.simulator import (
-        coupling, integrators, models, monitors, noise, simulator
-    )
-
-
 from . import ir
 
-class Coupling(ir.Node, coupling.Coupling):
+
+class Coupling(ir.Node):
     """
     An IR node representing a TVB Coupling instance.
 
     """
 
 
-class Integrator(ir.Node, integrators.Integrator):
+class Integrator(ir.Node):
     """
     An IR node representing a TVB Integrator instance.
 
     """
 
 
-class Model(ir.Node, models.Model):
+class Model(ir.Node):
     """
     An IR node representing a TVB Model instance.
 
     """
 
 
-class Monitor(ir.Node, monitors.Monitor):
+class Monitor(ir.Node):
     """
     An IR node representing a TVB Monitor instance.
 
     """
 
 
-class Noise(ir.Node, noise.Noise):
+class Noise(ir.Node):
     """
     An IR node representing a TVB Noise instance.
 
     """
 
 
-class Simulator(ir.Node, simulator.Simulator):
+class Simulator(ir.Node):
     """
     An IR node representing a TVB Simulator instance.
 
