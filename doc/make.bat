@@ -1,5 +1,7 @@
 @ECHO OFF
 
+set PYTHONPATH=..\;%PYTHONPATH%
+
 REM Command file for Sphinx documentation
 
 if "%SPHINXBUILD%" == "" (
