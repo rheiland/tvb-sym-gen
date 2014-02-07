@@ -1,3 +1,11 @@
+"""
+symgen.ir
+---------
+
+Intermediate representation of a simulation by a directed graph.
+
+"""
+
 class Node(object):
     def __init__(self, *deps, **meta):
         self.deps = deps
