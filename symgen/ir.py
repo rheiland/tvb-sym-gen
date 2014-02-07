@@ -78,7 +78,3 @@ class SpatialFilter(Filter):
 class TemporalFilter(Filter):
     pass
 
-# Stimulus is broadcasting temporal & spatial vector : expr + idx
-class Stimulus(Node):
-    pass
-

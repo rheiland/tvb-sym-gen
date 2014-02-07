@@ -8,7 +8,6 @@ Code generation from a dag.
 - transforms / passes should distinct from coder
 - but coder can spec required passes 
 - need a graph-subgarph isomorphism test (matching)?
-- simplegeneric + tuple approach?
 
 - three phases of transforms
   - simulator primitives translate themselves to ir
@@ -20,7 +19,6 @@ Code generation from a dag.
 
 """
 
-import dag
 
 class DAGTransform(object):
     "Traverse graph, transform nodes & subgraphs"
