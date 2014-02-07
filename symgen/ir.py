@@ -1,6 +1,6 @@
 """
-symgen.ir
----------
+ir
+--
 
 Intermediate representation of a simulation by a directed graph.
 

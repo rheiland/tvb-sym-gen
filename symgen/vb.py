@@ -1,6 +1,6 @@
 """
-symgen.tvb
-----------
+vb
+--
 
 Trivial transformations from TVB's simulator class to IR nodes
 
@@ -51,7 +51,7 @@ class Noise(TVBNode):
     """
 
 
-class Stimulus(Node):
+class Stimulus(TVBNode):
     """
     An IR node representing a TVB Stimulus instance.
 

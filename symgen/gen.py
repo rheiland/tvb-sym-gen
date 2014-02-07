@@ -1,9 +1,9 @@
 
 """
-symgen.gen
-==========
+gen
+---
 
-Provide base classes for code generation.
+Provides base classes for code generation.
 
 """
 

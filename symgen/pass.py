@@ -1,7 +1,7 @@
 
 """
-symgen.pass
------------
+pass
+----
 
 Passes manipulating IR in various ways. Generally, three kinds of passes will
 be used, simulation-specific, backend-specific and agnostic passes that deal 
