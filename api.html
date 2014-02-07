@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>symgen &mdash; symgen 0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="symgen 0 documentation" href="index.html" />
+    <link rel="prev" title="Planning" href="planning.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="planning.html" title="Planning"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">symgen 0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <span class="target" id="module-symgen"></span><div class="section" id="symgen">
+<h1>symgen<a class="headerlink" href="#symgen" title="Permalink to this headline">¶</a></h1>
+<p>Symgen API documentation, in order of workflow:</p>
+<span class="target" id="module-symgen.vb"></span><div class="section" id="vb">
+<h2>vb<a class="headerlink" href="#vb" title="Permalink to this headline">¶</a></h2>
+<p>Trivial transformations from TVB&#8217;s simulator class to IR nodes</p>
+<dl class="class">
+<dt id="symgen.vb.Coupling">
+<em class="property">class </em><tt class="descclassname">symgen.vb.</tt><tt class="descname">Coupling</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/vb.html#Coupling"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.vb.Coupling" title="Permalink to this definition">¶</a></dt>
+<dd><p>An IR node representing a TVB Coupling instance.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="symgen.vb.Integrator">
+<em class="property">class </em><tt class="descclassname">symgen.vb.</tt><tt class="descname">Integrator</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/vb.html#Integrator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.vb.Integrator" title="Permalink to this definition">¶</a></dt>
+<dd><p>An IR node representing a TVB Integrator instance.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="symgen.vb.Model">
+<em class="property">class </em><tt class="descclassname">symgen.vb.</tt><tt class="descname">Model</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/vb.html#Model"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.vb.Model" title="Permalink to this definition">¶</a></dt>
+<dd><p>An IR node representing a TVB Model instance.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="symgen.vb.Monitor">
+<em class="property">class </em><tt class="descclassname">symgen.vb.</tt><tt class="descname">Monitor</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/vb.html#Monitor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.vb.Monitor" title="Permalink to this definition">¶</a></dt>
+<dd><p>An IR node representing a TVB Monitor instance.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="symgen.vb.Noise">
+<em class="property">class </em><tt class="descclassname">symgen.vb.</tt><tt class="descname">Noise</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/vb.html#Noise"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.vb.Noise" title="Permalink to this definition">¶</a></dt>
+<dd><p>An IR node representing a TVB Noise instance.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="symgen.vb.Simulator">
+<em class="property">class </em><tt class="descclassname">symgen.vb.</tt><tt class="descname">Simulator</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/vb.html#Simulator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.vb.Simulator" title="Permalink to this definition">¶</a></dt>
+<dd><p>An IR node representing a TVB Simulator instance.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="symgen.vb.Stimulus">
+<em class="property">class </em><tt class="descclassname">symgen.vb.</tt><tt class="descname">Stimulus</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/vb.html#Stimulus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.vb.Stimulus" title="Permalink to this definition">¶</a></dt>
+<dd><p>An IR node representing a TVB Stimulus instance.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="symgen.vb.TVBNode">
+<em class="property">class </em><tt class="descclassname">symgen.vb.</tt><tt class="descname">TVBNode</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/vb.html#TVBNode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.vb.TVBNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>An IR Node representing an object from TVB.</p>
+</dd></dl>
+
+</div>
+<span class="target" id="module-symgen.ir"></span><div class="section" id="ir">
+<h2>ir<a class="headerlink" href="#ir" title="Permalink to this headline">¶</a></h2>
+<p>Intermediate representation of a simulation by a directed graph.</p>
+<dl class="class">
+<dt id="symgen.ir.Assign">
+<em class="property">class </em><tt class="descclassname">symgen.ir.</tt><tt class="descname">Assign</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/ir.html#Assign"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.ir.Assign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Depend on an assignment, not symbol, for the assigned value</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="symgen.ir.Buffer">
+<em class="property">class </em><tt class="descclassname">symgen.ir.</tt><tt class="descname">Buffer</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/ir.html#Buffer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.ir.Buffer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="symgen.ir.Const">
+<em class="property">class </em><tt class="descclassname">symgen.ir.</tt><tt class="descname">Const</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/ir.html#Const"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.ir.Const" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="symgen.ir.DenseReduce">
+<em class="property">class </em><tt class="descclassname">symgen.ir.</tt><tt class="descname">DenseReduce</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/ir.html#DenseReduce"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.ir.DenseReduce" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="symgen.ir.Expr">
+<em class="property">class </em><tt class="descclassname">symgen.ir.</tt><tt class="descname">Expr</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/ir.html#Expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.ir.Expr" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="symgen.ir.Expr.arith">
+<tt class="descname">arith</tt><big>(</big><em>op</em><big>)</big><a class="headerlink" href="#symgen.ir.Expr.arith" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symgen.ir.Expr.op">
+<tt class="descname">op</tt><em class="property"> = 'sub'</em><a class="headerlink" href="#symgen.ir.Expr.op" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="symgen.ir.Filter">
+<em class="property">class </em><tt class="descclassname">symgen.ir.</tt><tt class="descname">Filter</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/ir.html#Filter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.ir.Filter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="symgen.ir.Idx">
+<em class="property">class </em><tt class="descclassname">symgen.ir.</tt><tt class="descname">Idx</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/ir.html#Idx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.ir.Idx" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="symgen.ir.Indexable">
+<em class="property">class </em><tt class="descclassname">symgen.ir.</tt><tt class="descname">Indexable</tt><a class="reference internal" href="_modules/symgen/ir.html#Indexable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.ir.Indexable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="symgen.ir.Node">
+<em class="property">class </em><tt class="descclassname">symgen.ir.</tt><tt class="descname">Node</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/ir.html#Node"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.ir.Node" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="symgen.ir.Par">
+<em class="property">class </em><tt class="descclassname">symgen.ir.</tt><tt class="descname">Par</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/ir.html#Par"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.ir.Par" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="symgen.ir.Randn">
+<em class="property">class </em><tt class="descclassname">symgen.ir.</tt><tt class="descname">Randn</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/ir.html#Randn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.ir.Randn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="symgen.ir.Reduce">
+<em class="property">class </em><tt class="descclassname">symgen.ir.</tt><tt class="descname">Reduce</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/ir.html#Reduce"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.ir.Reduce" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="symgen.ir.Shaped">
+<em class="property">class </em><tt class="descclassname">symgen.ir.</tt><tt class="descname">Shaped</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/ir.html#Shaped"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.ir.Shaped" title="Permalink to this definition">¶</a></dt>
+<dd><p>If vectorization handled explicitly, useful to track shapes &amp; types along
+dataflow. This forces us to handle broadcasting, reductions, etc. correctly.
+If none is given, we can assume scalar? Idx and Assign would be informed.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="symgen.ir.SparseReduce">
+<em class="property">class </em><tt class="descclassname">symgen.ir.</tt><tt class="descname">SparseReduce</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/ir.html#SparseReduce"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.ir.SparseReduce" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="symgen.ir.SpatialFilter">
+<em class="property">class </em><tt class="descclassname">symgen.ir.</tt><tt class="descname">SpatialFilter</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/ir.html#SpatialFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.ir.SpatialFilter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="symgen.ir.Sym">
+<em class="property">class </em><tt class="descclassname">symgen.ir.</tt><tt class="descname">Sym</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/ir.html#Sym"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.ir.Sym" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="symgen.ir.TemporalFilter">
+<em class="property">class </em><tt class="descclassname">symgen.ir.</tt><tt class="descname">TemporalFilter</tt><big>(</big><em>*deps</em>, <em>**meta</em><big>)</big><a class="reference internal" href="_modules/symgen/ir.html#TemporalFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.ir.TemporalFilter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<span class="target" id="module-symgen.pass"></span><div class="section" id="pass">
+<h2>pass<a class="headerlink" href="#pass" title="Permalink to this headline">¶</a></h2>
+<p>Passes manipulating IR in various ways. Generally, three kinds of passes will
+be used, simulation-specific, backend-specific and agnostic passes that deal 
+primarily with optimization.</p>
+<dl class="class">
+<dt id="symgen.pass.Pass">
+<em class="property">class </em><tt class="descclassname">symgen.pass.</tt><tt class="descname">Pass</tt><a class="reference internal" href="_modules/symgen/pass.html#Pass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.pass.Pass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Passes walk the IR and perform certain transformations.</p>
+<dl class="method">
+<dt id="symgen.pass.Pass.match">
+<tt class="descname">match</tt><big>(</big><em>node</em><big>)</big><a class="reference internal" href="_modules/symgen/pass.html#Pass.match"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.pass.Pass.match" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test whether <cite>self</cite> should transform <cite>node</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="symgen.pass.Pass.transform">
+<tt class="descname">transform</tt><big>(</big><em>node</em><big>)</big><a class="reference internal" href="_modules/symgen/pass.html#Pass.transform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.pass.Pass.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform <cite>node</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<span class="target" id="module-symgen.gen"></span><div class="section" id="gen">
+<h2>gen<a class="headerlink" href="#gen" title="Permalink to this headline">¶</a></h2>
+<p>Provides base classes for code generation.</p>
+<dl class="class">
+<dt id="symgen.gen.CL">
+<em class="property">class </em><tt class="descclassname">symgen.gen.</tt><tt class="descname">CL</tt><a class="reference internal" href="_modules/symgen/gen.html#CL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.gen.CL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="symgen.gen.CUDA">
+<em class="property">class </em><tt class="descclassname">symgen.gen.</tt><tt class="descname">CUDA</tt><a class="reference internal" href="_modules/symgen/gen.html#CUDA"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.gen.CUDA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="symgen.gen.Cee">
+<em class="property">class </em><tt class="descclassname">symgen.gen.</tt><tt class="descname">Cee</tt><a class="reference internal" href="_modules/symgen/gen.html#Cee"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.gen.Cee" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="symgen.gen.Cython">
+<em class="property">class </em><tt class="descclassname">symgen.gen.</tt><tt class="descname">Cython</tt><a class="reference internal" href="_modules/symgen/gen.html#Cython"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.gen.Cython" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="symgen.gen.Gen">
+<em class="property">class </em><tt class="descclassname">symgen.gen.</tt><tt class="descname">Gen</tt><a class="reference internal" href="_modules/symgen/gen.html#Gen"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.gen.Gen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for code generators.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="symgen.gen.JS">
+<em class="property">class </em><tt class="descclassname">symgen.gen.</tt><tt class="descname">JS</tt><a class="reference internal" href="_modules/symgen/gen.html#JS"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.gen.JS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<span class="target" id="module-symgen.rt"></span><div class="section" id="rt">
+<h2>rt<a class="headerlink" href="#rt" title="Permalink to this headline">¶</a></h2>
+<p>Runtime support for simulations.</p>
+<dl class="class">
+<dt id="symgen.rt.RT">
+<em class="property">class </em><tt class="descclassname">symgen.rt.</tt><tt class="descname">RT</tt><a class="reference internal" href="_modules/symgen/rt.html#RT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#symgen.rt.RT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for runtimes.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">symgen</a><ul>
+<li><a class="reference internal" href="#vb">vb</a></li>
+<li><a class="reference internal" href="#ir">ir</a></li>
+<li><a class="reference internal" href="#pass">pass</a></li>
+<li><a class="reference internal" href="#gen">gen</a></li>
+<li><a class="reference internal" href="#rt">rt</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="planning.html"
+                        title="previous chapter">Planning</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/api.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="planning.html" title="Planning"
+             >previous</a> |</li>
+        <li><a href="index.html">symgen 0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Marmaduke Woodman.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
