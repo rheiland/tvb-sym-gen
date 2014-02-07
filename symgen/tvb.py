@@ -8,6 +8,7 @@ Trivial transformations from TVB's simulator class to IR nodes
 
 from . import ir
 
+
 class TVBNode(ir.Node):
     """
     An IR Node representing an object from TVB.
